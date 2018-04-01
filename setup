@@ -1,0 +1,62 @@
+#!/bin/bash
+#
+# nao alterar direitos autorais desse arquivo.
+# caso instalou em um link sem os direitos autorais
+# denuncie para H4V3R7 que se encontrar em github.com
+# By H4V3R7
+
+#instalacao de pacotes necessarios.
+
+var1=`which nikto`
+var2=`which whois`
+var3=`which netstat`
+var4=`which youtube-dl`
+
+
+clear
+
+if [ $var1 ]
+then
+echo ""
+echo -e "\033[1;34m FERRAMENTA NIKTO ENCONTRADA \033[0m"
+else
+pkg install nikto -y | apt-get install nikto -y
+echo ""
+echo -e " \033[1;31m FERRAMENTA INSTALADA \033[0m"
+fi
+
+if [ $var2 ]
+then
+echo ""
+echo -e "\033[1;34m FERRAMENTA WHOIS ENCONTRADA \033[0m"
+else
+pkg install whois -y | apt-get install whois -y
+echo ""
+echo -e " \033[1;31m FERRAMENTA INSTALADA \033[0m"
+fi
+
+if [ $var3 ]
+then
+echo ""
+echo -e "\033[1;34m FERRAMENTA NETSTAT ENCONTRADA \033[0m"
+else
+pkg install net-tools -y | apt-get install net-tools -y
+echo ""
+echo -e " \033[1;31m FERRAMENTA INSTALADA \033[0m"
+fi
+
+if [ $var4 ]
+then
+echo ""
+echo -e "\033[1;34m FERRAMENTA YOUTUBE-DL ENCONTRADA \033[0m"
+else
+pkg install youtube-dl -y | apt-get install youtube-dl -y
+echo ""
+echo -e " \033[1;31m FERRAMENTA INSTALADA \033[0m"
+fi
+
+echo ""
+echo "NIKTO -"
+echo "WHOIS -"
+echo "NETSTAT"
+echo "YOUTUBE-DL"
