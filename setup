@@ -54,9 +54,3 @@ pkg install youtube-dl -y | apt-get install youtube-dl -y
 echo ""
 echo -e " \033[1;31m FERRAMENTA INSTALADA \033[0m"
 fi
-
-echo ""
-echo "NIKTO -"
-echo "WHOIS -"
-echo "NETSTAT"
-echo "YOUTUBE-DL"
