@@ -72,6 +72,7 @@ echo -e "\033[1;34m Digite a url do vídeo \033[0m"
 echo -e "\033[1;36m ex: https://www.youtube.com/watch?v=ngrzEsWQKsM \033[0m"
 read -p "R:    " url
 exit
+fi
 
 func1(){
 case $you in
