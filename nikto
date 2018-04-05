@@ -245,36 +245,36 @@ fi
 
 if [[ $url ]] && [[ $port ]] && [[ $f3 ]]
 then
-nikto -h $url -port $port -Tuning $turn $acres
+nikto -h '$url' -port '$port' -Tuning '$turn' $acres
 exit
 fi
 
 if [[ $url ]] && [[ $port ]] && [[ $f3 ]] && [[ $f1 ]] && [[ $f4 ]]
 then
-nikto -h $url -port $port -Tuning $turn -useproxy $pro -o $form $acres
+nikto -h '$url' -port '$port' -Tuning '$turn' -useproxy '$pro' -o '$form' $acres
 exit
 fi
 
 if [[ $url ]] && [[ $port ]] && [[ $f3 ]] && [[ $f1 ]]
 then
-nikto -h $url -port $port -Tuning $turn -useproxy $pro $acres
+nikto -h '$url' -port '$port' -Tuning '$turn' -useproxy $pro $acres
 exit
 fi
 
 if [[ $url ]] && [[ $port ]] && [[ $f2 ]] && [[ $f3 ]]
 then
-nikto -h $url -port $port -Tuning $turn -Display $disp $acres
+nikto -h '$url' -port '$port' -Tuning '$turn' -Display '$disp' $acres
 exit
 fi
 
 if [[ $url ]] && [[ $port ]]
 then
-nikto -h $url -port $port $acres
+nikto -h '$url' -port '$port' $acres
 exit
 fi
 
 if [[ $url ]] && [[ $port ]] && [[ $form ]]
 then
-nikto -h $url -port $port $acres
+nikto -h '$url' -port '$port' $acres
 exit
 fi
