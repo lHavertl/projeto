@@ -102,19 +102,19 @@ f1=`func1`
 f2=`func2`
 f3=`func3`
 
-if [[ $you ]] && [[ $video ]] && [[ $legenda ]] && [[ $titulo ]] && [[ $url ]]
+if $you && $video && $legenda && $titulo && $url
 then
 youtube-dl -f $video --sub-lang $legenda -c $url
 exit
 fi
 
-if [[ $you ]] && [[ $audio ]] && [[ $titulo ]] && [[ $url ]]
+if $you && $audio &&  $titulo && $url 
 then
 youtube-dl -x --audio-format $audio -c $url
 exit
 fi
 
-if [[ $you ]] && [[ $video ]] && [[ $legenda ]] && [[ $titulo ]] && [[ $url ]]
+if $you && $video && $legenda && $titulo && $url 
 then
 youtube-dl -f $video -c $url
 exit
