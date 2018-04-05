@@ -95,7 +95,7 @@ echo -e '\033[1;34m    informe o numero/letra: \033[0m '
 read -p "R:   " turn
 fi
 
-if $turn
+if [[ $turn ]]
 then
 echo ""
 echo -e "\033[1;34m Deseja salvar os resultados em um arquivo? \033[0m"
@@ -143,34 +143,34 @@ esac
 
 func2(){
 case $disp in
-1)echo '1';;
-2)echo '2';;
-3)echo '3';;
-4)echo '4';;
-D)echo 'D';;
-E)echo 'E';;
-P)echo 'P';;
-S)echo 'S';;
-V)echo 'V';;
+1)echo 1;;
+2)echo 2;;
+3)echo 3;;
+4)echo 4;;
+D)echo D;;
+E)echo E;;
+P)echo P;;
+S)echo S;;
+V)echo V;;
 *)exit;;
 esac
 }
 
 func3(){
 case $turn in
-1)echo '1';;
-2)echo '2';;
-3)echo '3';;
-4)echo '4';;
-5)echo '5';;
-6)echo '6';;
-7)echo '7';;
-8)echo '8';;
-9)echo '9';;
-a)echo 'a';;
-b)echo 'b';;
-c)echo 'c';;
-x)echo 'x';;
+1)echo 1;;
+2)echo 2;;
+3)echo 3;;
+4)echo 4;;
+5)echo 5;;
+6)echo 6;;
+7)echo 7;;
+8)echo 8;;
+9)echo 9;;
+a)echo a;;
+b)echo b;;
+c)echo c;;
+x)echo x;;
 *)exit;;
 esac
 }
