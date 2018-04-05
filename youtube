@@ -33,6 +33,7 @@ fi
 if [[ $f1 ]]
 then
 echo -e "\033[1;31m ERROR \033[0m"
+exit
 fi
 
 if [[ $you = $audio2 ]]
@@ -71,7 +72,6 @@ case $you in
 video)echo "video";;
 audio)echo "audio";;
 *) echo -e "\033[1;31m ERROR \033[0m";;
-exit;;
 esac
 }
 
