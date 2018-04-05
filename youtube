@@ -78,7 +78,7 @@ func1(){
 case $you in
 video)echo "video";;
 audio)echo "audio";;
-*) echo -e "\033[1;31m ERROR \033[0m"
+*) echo -e "\033[1;31m ERROR \033[0m";;
 exit;;
 esac
 }
