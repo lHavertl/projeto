@@ -64,7 +64,6 @@ then
 echo -e "\033[1;34m Digite a url do vídeo \033[0m"
 echo -e "\033[1;36m ex: https://www.youtube.com/watch?v=ngrzEsWQKsM \033[0m"
 read -p "R:    " url
-exit
 fi
 
 func1(){
@@ -80,6 +79,7 @@ func2(){
 case audio in
 mp3)echo 'mp3';;
 mpeg)echo 'mpeg';;
+*) echo -e "\033[1;31m ERROR \033[0m";;
 esac
 }
 
@@ -88,6 +88,7 @@ case video in
 mp4)echo 'mp4';;
 flv)echo 'flv';;
 avi)echo 'avi';;
+*) echo -e "\033[1;31m ERROR \033[0m";;
 esac
 }
 
@@ -95,13 +96,13 @@ f1=`func1`
 f2=`func2`
 f3=`func3`
 
-if [[ $you ]] && [[ $video ]] && [[ $titulo ]] && [[ $url ]]
+if [[ $video ]] && [[ $titulo ]] && [[ $url ]]
 then
 youtube-dl -f $video -c $url -o $titulo
 exit
 fi
 
-if [[ $you ]] && [[ $audio ]] && [[ $titulo ]] && [[ $url ]] 
+if [[ $audio ]] && [[ $titulo ]] && [[ $url ]] 
 then
 youtube-dl -x --audio-format $audio -c $url -o $titulo
 exit
