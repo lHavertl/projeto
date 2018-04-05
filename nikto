@@ -143,34 +143,34 @@ esac
 
 func2(){
 case $disp in
-1)echo 1;;
-2)echo 2;;
-3)echo 3;;
-4)echo 4;;
-D)echo D;;
-E)echo E;;
-P)echo P;;
-S)echo S;;
-V)echo V;;
+1)echo '1';;
+2)echo '2';;
+3)echo '3';;
+4)echo '4';;
+D)echo 'D';;
+E)echo 'E';;
+P)echo 'P';;
+S)echo 'S';;
+V)echo 'V';;
 *)exit;;
 esac
 }
 
 func3(){
 case $turn in
-1)echo 1;;
-2)echo 2;;
-3)echo 3;;
-4)echo 4;;
-5)echo 5;;
-6)echo 6;;
-7)echo 7;;
-8)echo 8;;
-9)echo 9;;
-a)echo a;;
-b)echo b;;
-c)echo c;;
-x)echo x;;
+1)echo '1';;
+2)echo '2';;
+3)echo '3';;
+4)echo '4';;
+5)echo '5';;
+6)echo '6';;
+7)echo '7';;
+8)echo '8';;
+9)echo '9';;
+a)echo 'a';;
+b)echo 'b';;
+c)echo 'c';;
+x)echo 'x';;
 *)exit;;
 esac
 }
@@ -239,42 +239,42 @@ fi
 
 if [[ $url ]] && [[ $port ]] && [[ $f3 ]] && [[ $f4 ]]
 then
-ini9=`nikto -h $url -port $port -Tuning $turn -o $form $acres`
+nikto -h $url -port $port -Tuning $turn -o $form $acres
 exit
 fi
 
 if [[ $url ]] && [[ $port ]] && [[ $f3 ]]
 then
-nikto -h '$url' -port '$port' -Tuning '$turn' $acres
+nikto -h $url -port $port -Tuning $turn $acres
 exit
 fi
 
 if [[ $url ]] && [[ $port ]] && [[ $f3 ]] && [[ $f1 ]] && [[ $f4 ]]
 then
-nikto -h '$url' -port '$port' -Tuning '$turn' -useproxy '$pro' -o '$form' $acres
+nikto -h $url -port $port -Tuning $turn -useproxy $pro -o $form $acres
 exit
 fi
 
 if [[ $url ]] && [[ $port ]] && [[ $f3 ]] && [[ $f1 ]]
 then
-nikto -h '$url' -port '$port' -Tuning '$turn' -useproxy $pro $acres
+nikto -h $url -port $port -Tuning $turn -useproxy $pro $acres
 exit
 fi
 
 if [[ $url ]] && [[ $port ]] && [[ $f2 ]] && [[ $f3 ]]
 then
-nikto -h '$url' -port '$port' -Tuning '$turn' -Display '$disp' $acres
+nikto -h $url -port $port -Tuning $turn -Display $disp $acres
 exit
 fi
 
 if [[ $url ]] && [[ $port ]]
 then
-nikto -h '$url' -port '$port' $acres
+nikto -h $url -port $port $acres
 exit
 fi
 
 if [[ $url ]] && [[ $port ]] && [[ $form ]]
 then
-nikto -h '$url' -port '$port' $acres
+nikto -h $url -port $port $acres
 exit
 fi
